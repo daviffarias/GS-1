@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Viagens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Viagens de Embarcação</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Cadastro de Viagens</a></li>
+                <li><a href="consulta.html">Consulta de Viagens</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro">
+            <h2>Cadastro de Viagens</h2>
+            <form id="form-cadastro">
+                <label for="nome-embarcacao">Nome da Embarcação:</label>
+                <input type="text" id="nome-embarcacao" name="nome-embarcacao" required>
+
+                <label for="data-viagem">Data da Viagem:</label>
+                <input type="date" id="data-viagem" name="data-viagem" required>
+
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+
+                <label for="tipo-carga">Tipo de Carga:</label>
+                <input type="text" id="tipo-carga" name="tipo-carga" required>
+
+                <label for="quantidade-carga">Quantidade de Carga (em toneladas):</label>
+                <input type="number" id="quantidade-carga" name="quantidade-carga" required>
+
+                <button type="submit">Cadastrar Viagem</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Projeto de Limpeza dos Oceanos</p>
+    </footer>
+</body>
+</html>

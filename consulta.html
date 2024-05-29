@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Viagens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Viagens de Embarcação</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Cadastro de Viagens</a></li>
+                <li><a href="consulta.html">Consulta de Viagens</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="consulta">
+            <h2>Consulta de Viagens</h2>
+            <form id="form-consulta">
+                <label for="consulta-embarcacao">Nome da Embarcação:</label>
+                <input type="text" id="consulta-embarcacao" name="consulta-embarcacao">
+
+                <label for="consulta-data-inicio">Data Início:</label>
+                <input type="date" id="consulta-data-inicio" name="consulta-data-inicio">
+
+                <label for="consulta-data-fim">Data Fim:</label>
+                <input type="date" id="consulta-data-fim" name="consulta-data-fim">
+
+                <button type="submit">Consultar Viagens</button>
+            </form>
+            <div id="resultado-consulta">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Projeto de Limpeza dos Oceanos</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
