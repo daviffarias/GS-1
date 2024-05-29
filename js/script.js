@@ -16,9 +16,13 @@ function salvarViagem(event) {
         quantidadeCarga
     };
 
+    console.log('Cadastrando viagem:', viagem);
+
     let viagens = JSON.parse(localStorage.getItem('viagens')) || [];
     viagens.push(viagem);
     localStorage.setItem('viagens', JSON.stringify(viagens));
+
+    console.log('Viagens salvas:', viagens);
 
     alert('Viagem cadastrada com sucesso!');
     document.getElementById('form-cadastro').reset();
@@ -32,9 +36,10 @@ function consultarViagens(event) {
 
     const nomeEmbarcacao = document.getElementById('consulta-embarcacao').value;
     const dataInicio = document.getElementById('consulta-data-inicio').value;
-    const dataFim = document.getElementById('consulta-data-fim').value;
 
     let viagens = JSON.parse(localStorage.getItem('viagens')) || [];
+    console.log('Viagens armazenadas:', viagens);
+
     let resultados = viagens;
 
     if (nomeEmbarcacao) {
@@ -45,10 +50,7 @@ function consultarViagens(event) {
         resultados = resultados.filter(viagem => new Date(viagem.dataViagem) >= new Date(dataInicio));
     }
 
-    if (dataFim) {
-        resultados = resultados.filter(viagem => new Date(viagem.dataViagem) <= new Date(dataFim));
-    }
-
+    console.log('Resultados da consulta:', resultados);
     exibirResultados(resultados);
 }
 
