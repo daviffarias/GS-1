@@ -26,7 +26,7 @@ function salvarViagem(event) {
 
 document.getElementById('form-cadastro').addEventListener('submit', salvarViagem);
 
-// Função para consultar viagens no localStorage
+
 function consultarViagens(event) {
     event.preventDefault();
 
