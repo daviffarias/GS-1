@@ -47,7 +47,7 @@ main {
     padding: 2em;
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 80px; /* Adiciona espaço extra para evitar sobreposição com o footer */
+    padding-bottom: 80px; 
 }
 
 section {
@@ -123,4 +123,16 @@ table th, table td {
 table th {
     background-color: #004d40;
     color: white;
+}
+#detalhes-consulta div {
+    border: 1px solid #004d40;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#detalhes-consulta h3 {
+    margin-top: 0;
+    color: #00695c;
 }
