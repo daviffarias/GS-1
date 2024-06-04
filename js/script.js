@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM fully loaded and parsed');
 
-   
     function salvarViagem(event) {
         event.preventDefault();
 
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Formulário de cadastro não encontrado');
     }
 
-    
     function consultarViagens(event) {
         event.preventDefault();
         console.log('Consultando viagens...');
@@ -125,4 +123,26 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log('Formulário de consulta não encontrado');
     }
+
+    
+    const formInputs = document.querySelectorAll("input, button");
+
+    formInputs.forEach(input => {
+        input.addEventListener("focus", () => {
+            input.classList.add("focused");
+        });
+        input.addEventListener("blur", () => {
+            input.classList.remove("focused");
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    });
 });
